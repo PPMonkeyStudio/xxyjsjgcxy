@@ -1,0 +1,443 @@
+html {
+	font-size: 62.5%;
+}
+
+body, div, ul, li, a, span, input, img {
+	margin: 0px;
+	padding: 0px;
+	border: none;
+}
+
+.clear {
+	clear: both;
+}
+
+.info1 {
+	width: 303px;
+	float: left;
+	margin: 0px 15px;
+	overflow: hidden;
+}
+
+.info2 {
+	width: 303px;
+	height: 121px;
+	float: left;
+	margin-top: 10px !important;
+	margin-right: 30px;
+	overflow: hidden;
+}
+/*header style start*/
+#wrapper {
+	width: 100%;
+	min-width: 1000px;
+}
+
+.head {
+	text-align: center;
+}
+/*娣囶喗鏁約wiper姒涙顓婚弽宄扮础*/
+
+/*閸濆秴绨插蹇氱枂閹绢厼娴*/
+.lunbo {
+	min-width: 970px;
+	overflow: hidden;
+	position: relative;
+}
+
+.swiper_big {
+	max-width: 1200px;
+	height: 470px;
+	display: inline-block;
+}
+
+.part1 {
+	min-width: 1000px;
+	height: 450px;
+	overflow: hidden;
+}
+
+.part1_1 {
+	max-width: 1200px;
+	min-width: 1000px;
+}
+
+.img_title {
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	top: 390px;
+	font: 20px/60px "瀵邦喛钂嬮梿鍛寸拨";
+	background: rgba(0, 50, 98, 0.7);
+	text-align: center;
+}
+
+.img_title>span {
+	width: 970px;
+	overflow: hidden;
+	white-space: nowrap;
+	color: white;
+	display: inline-block;
+	text-align: left;
+}
+
+.part_1 {
+	margin: 0 auto;
+	top: 460px;
+	left: 50%;
+}
+
+.pagination {
+	float: left;
+	margin-top: 3px;
+	z-index: 20;
+	bottom: 27px;
+	width: 100%;
+	text-align: center;
+}
+
+.swiper-pagination-bullet {
+	margin-right: 8px;
+}
+
+.part1_1 img {
+	width: 100%;
+}
+
+.pagination {
+	float: left;
+	margin-top: 3px;
+	z-index: 20;
+	bottom: 27px;
+	width: 100%;
+	text-align: center;
+}
+
+.swiper-pagination-bullet {
+	margin-right: 8px;
+}
+/*header style end*/
+
+/*main style start*/
+/*newBox style start*/
+.main {
+	width: 100%;
+	min-width: 970px;
+}
+
+.newBox {
+	width: 970px;
+	margin: 0 auto;
+	border-bottom: 1px solid #d0dce6;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.newTop span {
+	font: 20px/30px "瀵邦喛钂嬮梿鍛寸拨";
+	color: black;
+}
+
+.newTop a {
+	float: right;
+	font: bold 14px/30px "瀵邦喛钂嬮梿鍛寸拨";
+	font-family: Arial, Verdana, Sans-serif;
+	color: #808080;
+}
+
+.info-show {
+	width: 1000px;
+	height: 195px;
+}
+
+.info-content {
+	height: 225px;
+}
+
+.media-left-change {
+	float: left;
+	margin-right: 20px;
+}
+
+.media-left-change a {
+	width: 55px;
+	height: 55px;
+}
+
+.notiBox {
+	margin: 0px;
+	padding: 0px;
+}
+
+.time {
+	width: 55px;
+	height: 55px;
+	position: absolute;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.time span:first-child {
+	margin: 5px 15px 0px 15px;
+	color: #003360;
+	font: 20px/20px "瀵邦喛钂嬮梿鍛寸拨";
+	display: block;
+}
+
+.time span:last-child {
+	width: 39.5px;
+	margin: auto;
+	color: #003360;
+	font: 10px/20px "瀵邦喛钂嬮梿鍛寸拨";
+}
+
+.content {
+	width: 200px;
+	float: left;
+}
+
+.media-body a:first-child {
+	color: black;
+	width: 238px;
+	max-height: 44px;
+	text-overflow: ellipsis;
+	font: 16px/22px "瀵邦喛钂嬮梿鍛寸拨";
+	overflow: hidden;
+	display: inline-block;
+}
+
+.media-body a:first-child:hover {
+	color: #003262;
+}
+
+.media-body a:last-child:hover {
+	color: #c98c2f;
+}
+
+.media-body a:last-child {
+	width: 228px;
+	height: 88px;
+	margin-top: 4px;
+	font: 12px/22px "瀵邦喛钂嬮梿鍛寸拨";
+	color: #666;
+	display: inline-block;
+	/*閺傚洦婀扮搾鍛毉閺勫墽銇氶悙锟*/
+	text-overflow: clip;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+}
+
+/*鐎涳箓娅岀憰渚� start*/
+.newCot { /*娑撳秴鐢崶鍓у閻ㄥ嫰銆婇弶鈥茶礋閽冿拷/
+	border-top: 2px solid #0e477e;
+}
+
+.cot_content .img_color { /*鐢箑娴橀悧鍥╂畱妞よ埖娼稉鐑橆煹*/
+	border-top: 2px solid #003262;
+	height: 330px;
+}
+
+.info_img {
+	width: 303px;
+	height: 121px;
+	border: none;
+}
+
+.new_title {
+	width: 970px;
+	margin-left: 15px;
+}
+
+.info_wrapper {
+	width: 1000px;
+	height: 750px;
+	border: 0px;
+}
+
+.info_content {
+	width: 1000px;
+	height: 730px;
+}
+
+.newCot a { /*娑撳秴鐢崶鍓у閻ㄥ嫯顩﹂梻鑽ゆ畱a*/
+	width: 303px;
+	height: 88px;
+	margin-top: 4px;
+	font: 12px/22px "瀵邦喛钂嬮梿鍛寸拨";
+	color: #666;
+	display: inline-block;
+	/*閺傚洦婀扮搾鍛毉閺勫墽銇氶悙锟*/
+	text-overflow: clip;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4;
+}
+
+.newCot .word_a { /*鐢箑娴橀悧鍥╂畱鐟曚線妞堥惃鍒*/
+	/*width: 300px;
+	height: 66px;
+	font: 15px/22px "瀵邦喛钂嬮梿鍛寸拨";
+	color: #54606a;
+	text-overflow: clip;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	letter-spacing: 2px;*/
+	width: 0px;
+	height: 0px;
+}
+
+.word_a:hover { /*鐢箑娴橀悧鍥╂畱鐟曚線妞堥惃鍕瀮鐎涙褰夐懝锟*/
+	color: #c98c2f;
+}
+
+.heading {
+	width: 303px;
+	font: 16px/22px '鑴﹀瀯鑴犻搯鑴╄劀娼炶劮';
+	overflow: hidden;
+	max-height: 44px;
+	margin-top: 10px;
+}
+
+.heading:hover {
+	color: #003262;
+	cursor: pointer;
+}
+
+.cot_wrapper {
+	height: 230px;
+	margin-bottom: 50px;
+	overflow: hidden;
+}
+
+.cot_content {
+	height: 230px;
+}
+
+.cot_content_center {
+	height: 230px;
+	overflow: hidden;
+}
+/*鐎涳箓娅岀憰渚� end*/
+/*閹存劖鐏夌仦鏇犮仛 start*/
+/*swiper_small start*/
+.swiper_small {
+	margin-top: 10px;
+	float: left;
+	width: 465px;
+	height: 350px;
+	position: relative;
+}
+
+.part2_1 img {
+	width: 465px;
+	height: 310px;
+	overflow: hidden;
+}
+
+.part2_1 .title {
+	font: 16px/20px "瀵邦喛钂嬮梿鍛寸拨";
+	position: absolute;
+	top: 330px;
+	width: 400px;
+	height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	z-index: 2;
+	color: #666;
+}
+
+.part2_1 .title:hover {
+	color: #c98c2f;
+}
+
+.part2 {
+	width: 465px;
+	height: 350px;
+}
+
+.part_2 {
+	top: 96%;
+	right: 0px;
+}
+/*swiper_small end*/
+.showList {
+	width: 492px;
+	height: 300px;
+	float: right;
+	text-overflow: clip;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.showList_img {
+	position: relative;
+	top: -15px;
+	left: 10px;
+}
+
+.showCot {
+	height: 36px;
+	overflow: hidden;
+}
+
+.showList_text {
+	width: 400px;
+	height: 36px;
+	display: inline-block;
+	margin: 0px 0px 0px 15px;
+	font: 16px/36px "瀵邦喛钂嬮梿鍛寸拨";
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #666666;
+}
+
+.showList_text:hover {
+	color: #2a6496;
+}
+
+.showList_time {
+	float: right;
+	color: #8b9298;
+	font: 14px/36px "瀵邦喛钂嬮梿鍛寸拨";
+}
+/*閹存劖鐏夌仦鏇犮仛 end*/
+/*newBox style end*/
+/*main style end*/
+
+/*footer style start*/
+/*link start*/
+.link {
+	width: 100%;
+	min-width: 970px;
+	height: 150px;
+	background-color: #e6e6e5;
+}
+
+.linkCot {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.linkCot span {
+	display: block;
+	color: #003262;
+	font: bold 19px/3em "瀵邦喛钂嬮梿鍛寸拨";
+}
+
+.linkCot a {
+	color: #54606a;
+	margin-right: 60px;
+	font: 16px/3em "瀵邦喛钂嬮梿鍛寸拨";
+}
+/*link end*/
+
+/*footer style end*/

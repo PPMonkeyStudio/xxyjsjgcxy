@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+<!-- 	<package name="sadmin" namespace="/" extends="struts-default"> -->
+<!-- 		<action name="SadminAction" class="sadminAction" -->
+<!-- 			method="{1}"> -->
+<!-- 			<result name="adminList">/WEB-INF/views/sadmin/adminList.jsp -->
+<!-- 			</result> -->
+<!-- 			<result name="success">/WEB-INF/views/sadmin/success.jsp -->
+<!-- 			</result> -->
+<!-- 		</action> -->
+<!-- 	</package> -->
+<package name="sadmin" namespace="/sadmin" extends="struts-default">
+		<action name="admin_*" class="com.xxyjsjgcxy.sadmin.action.SadminAction"
+			method="{1}">
+
+			<result name="page_list_admin">/WEB-INF/views/sadmin/page_list_admin.jsp
+			</result>
+			<result name="page_create_admin">/WEB-INF/views/sadmin/page_create_admin.jsp
+			</result>
+			<result name="updateAdminPage">/WEB-INF/views/sadmin/page_create_admin.jsp
+			</result>
+			<result name="success">/navbar.jsp</result>
+			<result name="updateAdminPasswordPage">/WEB-INF/views/sadmin/page_modified_password.jsp</result>
+			<result name="page_modified_personalPassword">/WEB-INF/views/sadmin/page_modified_personalPassword.jsp</result>
+		</action>
+	</package>
+
+</struts>

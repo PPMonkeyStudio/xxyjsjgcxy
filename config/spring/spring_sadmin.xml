@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- 	<bean id="sadminAction" class="com.pxxyca.sadmin.action.SadminAction" -->
+<!-- 		scope="prototype"> -->
+<!-- 		<property name="adminService" ref="adminService"></property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="adminService" class="com.pxxyca.sadmin.service.impl.SadminServiceImpl"> -->
+<!-- 		<property name="adminDao" ref="adminDao"></property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="adminDao" class="com.pxxyca.sadmin.dao.impl.SadminDaoImpl"> -->
+<!-- 		<property name="sessionFactory" ref="sessionFactory"></property> -->
+<!-- 	</bean> -->
+<bean id="sadminAdminAction" class="com.xxyjsjgcxy.sadmin.action.SadminAction"
+		scope="prototype">
+		<property name="sadminAdminService" ref="sadminAdminService"></property>
+	</bean>
+	<!-- -->
+	<bean id="sadminAdminService" class="com.xxyjsjgcxy.sadmin.service.impl.SadminAdminServiceImpl">
+		<property name="sadminAdminDao" ref="sadminAdminDao"></property>
+	</bean>
+	<!-- -->
+	<bean id="sadminAdminDao" class="com.xxyjsjgcxy.sadmin.dao.impl.SadminAdminDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+</beans>

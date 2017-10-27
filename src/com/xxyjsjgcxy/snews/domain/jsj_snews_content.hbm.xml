@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-16 8:36:11 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xxyjsjgcxy.snews.domain.jsj_snews_content" table="JSJ_SNEWS_CONTENT">
+        <id name="jsj_snews_content_id" type="java.lang.String">
+            <column name="JSJ_SNEWS_CONTENT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="content_news" type="java.lang.String">
+            <column name="CONTENT_NEWS" />
+        </property>
+        <property name="content_text" type="java.lang.String">
+            <column name="CONTENT_TEXT" />
+        </property>
+        <property name="content_gmt_create" type="java.lang.String">
+            <column name="CONTENT_GMT_CREATE" />
+        </property>
+        <property name="content_gmt_modified" type="java.lang.String">
+            <column name="CONTENT_GMT_MODIFIED" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="scarousel" namespace="/scarousel" extends="struts-default">
+		<action name="skip_*" class="com.xxyjsjgcxy.scarousel.action.SkipAction" method="skipTo{1}">
+		    <result name="successAdd">/WEB-INF/views/scarousel/add_carousel.jsp</result>
+		    <result name="failAdd"></result>
+		    <result name="successDelete">/WEB-INF/views/scarousel/delete_carousel.jsp</result>
+		    <result name="failDelete"></result>
+		    <result name="successQuery">/WEB-INF/views/scarousel/query_carousel.jsp</result>
+		    <result name="failQuery"></result>
+		</action>
+		<action name="scarousel_*" class="com.xxyjsjgcxy.scarousel.action.ScarouselAction" method="{1}">
+		    <result name="successDelete">/scarousel/skip_Delete.action</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,257 @@
+html, input, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+	h6, p, a, var, ol, ul, li, form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline
+}
+
+body {
+	width: 100%;
+}
+
+a {
+	color: #003263;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #c98c2f;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+.topImfo {
+	background-color: #003262;
+	height: 40px;
+	min-width: 970px;
+}
+
+.imfo {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.imfo a {
+	color: white;
+	font: 13px/40px "寰蒋闆呴粦";
+}
+
+.imfoLeft {
+	float: right;
+}
+
+.search {
+	width: 160px;
+	height: 22px;
+	margin: 9px 0px 9px 10px;
+	background-color: white;
+	float: right;
+	border-radius: 3px;
+	padding: 0px;
+}
+
+.search input {
+	border: 0px;
+	width: 130px;
+	height: 19px;
+	border-radius: 3px;
+	outline: none;
+	/*鍘绘帀鐐瑰嚮杈规*/
+}
+
+.nav {
+	height: 155px;
+	position: relative;
+	z-index: 99999999;
+}
+
+.header_nav {
+	margin: 5px auto;
+	height: 82px;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 10px;
+}
+
+.logo {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.logo img {
+	margin-top: 20px;
+}
+/*鍝嶅簲寮*/
+.navlist-wrap {
+	width: 970px;
+	height: 50px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.navlist {
+	max-width: 970px;
+	min-width: 125px;
+	height: 50px;
+	display: inline-block;
+}
+
+.nav-btn {
+	width: 107.7px;
+	float: left;
+	font: 16px/50px "寰蒋闆呴粦";
+	text-align: center;
+	text-decoration: none
+}
+
+.navlist a:hover {
+	color: #FFFFFF;
+}
+
+.navlist .btn-active {
+	color: #FFFFFF;
+	background-color: #003262;
+}
+
+.top-nav {
+	margin: 0 auto;
+}
+
+.top-nav .expand {
+	width: 970px;
+	height: 0px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.item {
+	display: none;
+}
+
+.expand .detailNav .item-active {
+	display: block;
+	width: 970px;
+	/*-------nav鑳藉湪闀�00%expand渚濇鏄剧ず鐨勯噸鐐逛腑鐨勯噸鐐�-----*/
+	margin: 0 auto;
+}
+
+.detailNav .detailNav-list {
+	text-align: center;
+	height: 195px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.detailNav_left {
+	float: left;
+	width: 60%;
+	height: 180px;
+	border-right: 2px solid #b5c6d6;
+}
+
+.detailNav_left img {
+	width: 250px;
+	height: 170px;
+	float: left;
+	margin: 10px 0px 0px 20px;
+}
+
+.detailNav_left .introImg {
+	width: 240px;
+	height: 140px;
+	float: right;
+	font: bold 15px/1.5em "寰蒋闆呴粦";
+	margin: 15px 30px 15px 0px;
+	overflow: hidden;
+}
+
+.detailNav_right {
+	width: 30%;
+	float: left;
+	margin: 5px 0px 0px 50px;
+	text-align: left;
+	overflow: hidden;
+}
+
+.detailNav_right a {
+	margin-right: 30px;
+	color: #003162;
+	font: bold 16px/2.5em "寰蒋闆呴粦";
+}
+
+.detailNav_right a:hover {
+	color: #c98c2f;
+}
+
+/*footer style start*/
+.footer {
+	min-width: 970px;
+}
+
+.navi_head {
+	height: 50px;
+	background-color: #babfc3;
+}
+
+.navi_body {
+	overflow: hidden;
+	height: 250px;
+	background-color: #babfc3;
+	transition: height ease 0.5s;
+}
+
+/*.navi_body:hover{
+	height:250px;
+}*/
+.navi_head>div>span {
+	width: 130px;
+	height: 250px;
+	display: inline-block;
+	font-weight: bold;
+	color: #023262;
+	font-size: 14px;
+	vertical-align: top;
+	margin-right: -6px;
+}
+
+.navi_head>div>span>p a {
+	color: #54606a;
+	font: 15px/3em "寰蒋闆呴粦";
+	text-decoration: none;
+	text-align: center;
+	width: 130px;
+	display: inline-block;
+}
+
+.navi_head>div>span>p a:hover {
+	color: #56606a;
+}
+
+.navi_title {
+	font-size: 16px;
+	line-height: 50px;
+	/*margin-left: 40px;*/
+	text-align: center;
+}
+
+.navi_head>div>span:hover {
+	background: #acb0b4;
+}
+
+.foot {
+	min-width: 970px;
+	height: 20%;
+	background-color: #003263;
+	color: #babfc4;
+	text-align: center;
+	font: 16px/2em "寰蒋闆呴粦";
+}
+
+/*footer style end*/

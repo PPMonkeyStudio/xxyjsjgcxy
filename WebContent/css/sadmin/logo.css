@@ -1,0 +1,78 @@
+﻿html,body,div,h1,h2,h3,h4,h5,h6{
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	vertical-align: baseline
+}
+input{
+	outline: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	border: none;
+}
+body{
+	background:#f3f5f9 ;
+}
+.clear{
+	clear: both;
+}
+.logo{
+	width: 30%;
+	height: 400px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background: white;
+}
+.header{
+	height:100px;
+	margin-top: 50px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.header img{
+	position:absolute;
+    top:60px ;
+    left: 170px;
+}
+.header h1{
+	line-height: 70px;
+}
+.content{
+    height:230px ;
+    text-align: center;
+}
+.userName,.passWord{
+	width: 90%;
+	margin:10px auto;
+	padding-left: 10px;
+	font:17px/30px "微软雅黑";
+	box-shadow:5px 5px 3px rgba(243,241,241,0.9);
+	background: #fdfdfd;
+}
+.check-box{
+	float: left;
+	margin-left: 4%;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	color: white;
+}
+.content label{
+	float: left;
+}
+.logo-button{
+	width: 92%;
+	height: 40px;
+	color: white;
+	margin-top: 40px;
+	margin-left: 4%;
+	font:20px/40px "微软雅黑";
+	background: #00abff;
+}
+/*.logo-button:hover{
+	background: #0284c4;
+}*/

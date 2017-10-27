@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--action层配置  -->
+	<bean id="skipAction" class="com.xxyjsjgcxy.scarousel.action.SkipAction" scope="prototype"> 
+		  
+	</bean>
+	<bean id="scarouselAction" class="com.xxyjsjgcxy.scarousel.action.ScarouselAction" scope="prototype">
+	    <property name="scarouselService" ref="scarouselService"></property>
+	</bean>
+	<!--service层配置 -->
+	<bean id="scarouselService" class="com.xxyjsjgcxy.scarousel.service.impl.ScarouselServiceImpl">
+	    <property name="scarouselDao" ref="scarouselDao"></property>
+	</bean>
+
+	<!--dao层配置 -->
+	<bean id="scarouselDao" class="com.xxyjsjgcxy.scarousel.dao.impl.scarouselDaoImpl">
+	    <property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+
+</beans>

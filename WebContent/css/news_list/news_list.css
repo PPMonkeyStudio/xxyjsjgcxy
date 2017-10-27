@@ -1,0 +1,92 @@
+    *{ 
+	    margin: 0;
+	    padding: 0;
+	  
+     }
+     body{
+     font-family: -apple-system, 
+     BlinkMacSystemFont,
+      "Segoe UI", 
+      Helvetica, 
+      Arial, 
+      sans-serif,
+       "Apple Color Emoji",
+        "Segoe UI Emoji", 
+        "Segoe UI Symbol";
+        }
+    #news_head{
+    	width: 100%;
+    	height: 60px;
+    	background-color: #3b7ea1;	
+    	font-size:20px;
+    }
+    #news_head p{
+    	color: white;
+    	font-size: 1.5em; 
+    	margin: 0 auto;
+    	line-height: 60px;
+    }
+    #news_list_content_head{
+    	width:550px;
+    	height:25px;
+    	color: #013364;
+    	font-weight:500;
+    	font-size:18px;
+    	margin-top: 20px;
+    	display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+    	
+    }
+    #news_list_content_head a:hover{
+    	color:#c4820e;
+    	cursor: pointer;
+    }
+    #news_list_content_datekeyword{
+        width:550px;
+        height:20px;
+    	font-size:14px;
+    	overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+    	color: #555555;
+    }
+    #news_page{
+    margin-top:20px;
+    color: #013364;
+    }
+    #news_page span{
+    	color: #013364;
+    }
+    
+   #news_page span:hover{
+    	color:#c4820e;
+    	cursor: pointer;
+    }
+    #news_record{
+    margin-bottom:20px;
+    }
+    #news_record span{
+    	color: #555555;
+    	
+    }
+    #main_right_up a{
+    text-decoration:none ;
+    }
+     #main_right_up a:hover{
+   color:black;
+    }
+    #main_right_down p{
+    	color: #013364;
+    	display: inline-block;
+    }
+    #main_right_down p:hover{
+    	color:#c4820e;
+    	cursor: pointer;
+    }
+   .clear{
+   clear:both;
+   }
+ 
+ 

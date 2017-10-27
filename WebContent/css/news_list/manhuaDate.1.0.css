@@ -1,0 +1,124 @@
+*{
+	padding:0; 
+	margin:0
+}
+/*日历的整体样式*/
+.calender{ 
+
+	width:340px; 
+	border:1px #D6D6D6 solid; 
+	background:none; 
+	position:absolute; 
+	font-family: "微软雅黑";
+	color: #b4c5d5;
+
+	
+}
+/*表格样式*/
+.calendertb{
+	width:100%;
+}
+/*表格内容样式*/
+.calendertb td{
+	width:35px; 
+	height:35px; 
+	text-align:center; 
+	vertical-align:middle; 
+	cursor:pointer; 
+	font-size:14px; 
+	
+}
+
+/*鼠标滑过样式*/
+.calendertb td.hover,.calendertb td.weekendhover{
+
+}
+#year{
+	color:#023260;
+}
+#month{
+	color:#023260;
+}
+/*表格头部样式*/
+.calendertb th{
+	width:35px; 
+	height:30px;
+	border:1px #CCCCCC solid; 
+	text-align:center; 
+	vertical-align:middle; 
+	
+	color:#023260; 
+    background-color:none;
+}
+.tdtoday{ 
+	color:#c5820f;
+	width:35px; 
+	height:35px; 
+	text-align:center; 
+	vertical-align:middle; 
+	cursor:pointer; 
+	font-size:14px; 
+}
+.getyear{ 
+	height:35px; 
+	
+	line-height:35px; 
+	/* width:100%; */
+	text-align:center;
+}
+.preMonth{ 
+	font-size:14px; 
+	font-weight:bold; 
+
+	margin-right:75px;
+	
+	color:#023260;
+}
+.preMonth:hover{
+	cursor:default;
+}
+.nextMonth{ 
+	font-size:14px; 
+	font-weight:bold; 
+margin-left:75px;
+	color:#023260;
+}
+.nextMonth:hover{
+	cursor:default;
+}
+/*输入框样式*/
+.mh_date{
+	width:249px; 
+	height:20px; 
+	line-height:20px; 
+	padding:5px; 
+	cursor:pointer; 
+	background:url(dateIco.png) no-repeat right center;
+}
+.zhezhao{
+	width:100%; 
+	height:100%; 
+	position:fixed;     
+    /*z-index:998;*/	
+	background:red;
+	filter:alpha(opacity=10);
+	opacity:0.1;
+    display:none; 
+}
+ select {
+    	appearance: none;
+    	-moz-appearance: none;
+    	/* Firefox */
+    	-webkit-appearance: none;
+    	/* Safari 和 Chrome */
+    	border-width: 0px;
+    	border: none;
+    	disabled:disabled;
+    
+    }
+    select::-ms-expand { 
+         display: none;
+     }/*IE*/
+    .disabled {
+    pointer-events: none;
+    }
