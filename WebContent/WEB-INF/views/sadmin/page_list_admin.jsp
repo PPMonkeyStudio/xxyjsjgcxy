@@ -23,8 +23,9 @@
 	<!---------------------------------------------------------------------------------------------------->
 	<div style="margin: 50px 0 0 260px; width: calc(100% - 260px);">
 		<!-- 内容写在此处 -->
-<span id="span_sqrt" style="display: none;"><s:property value="page_list_admin.search.sqrt" /></span>
-				
+		<span id="span_sqrt" style="display: none;"><s:property
+				value="page_list_admin.search.sqrt" /></span>
+
 		<!--  -->
 		<span id="span_sqrt_sc" style="display: none;"><s:property
 				value="page_list_admin.search.sqrt_sc" /></span>
@@ -38,55 +39,59 @@
 				value="page_list_admin.search.name" />"
 					style="width: 200px; float: right; margin: 8px 10px 8px 50px;" />
 
-</td>
+				</td>
 			</tr>
 		</table>
-<table style="width: 95%; margin: 20px auto; text-align: center;"
+		<table style="width: 95%; margin: 20px auto; text-align: center;"
 			class="table-bordered">
 			<tr>
 				<!--  -->
-				
+
 				<th>管理员账号</th>
 				<th>管理员管理权限</th>
 				<th>轮播图管理权限</th>
 				<th>新闻管理权限</th>
 				<th>链接管理权限</th>
-				
+
 				<th id="admin_gmt_create" onclick="click_sqrt(this)">创建时间</th>
 				<th id="admin_gmt_modified" onclick="click_sqrt(this)">修改时间</th>
-				<th  colspan="2">操作</th>
+				<th colspan="2">操作</th>
 			</tr>
-
-			<s:iterator value="page_list_admin.adminDTOList"
-				id="NACACDTOL">
+			<s:iterator value="page_list_admin.adminDTOList" id="NACACDTOL">
 				<tr>
 					<td><s:property value="#NACACDTOL.admin.admin_account"
 							escape="false" /></td>
 
-					<td><s:property value="#NACACDTOL.admin.admin_premission_admin"
+					<td><s:property
+							value="#NACACDTOL.admin.admin_premission_admin" escape="false" /></td>
+					<td><s:property
+							value="#NACACDTOL.admin.admin_premission_scarousel"
 							escape="false" /></td>
-							<td><s:property value="#NACACDTOL.admin.admin_premission_scarousel"
-							escape="false" /></td>
-							<td><s:property value="#NACACDTOL.admin.admin_premission_snews"
-							escape="false" /></td>
-							<td><s:property value="#NACACDTOL.admin.admin_premission_slink"
-							escape="false" /></td>
-								
-					
+					<td><s:property
+							value="#NACACDTOL.admin.admin_premission_snews" escape="false" /></td>
+					<td><s:property
+							value="#NACACDTOL.admin.admin_premission_slink" escape="false" /></td>
+
+
 					<td><s:property value="#NACACDTOL.admin.admin_gmt_create" /></td>
 					<td><s:property value="#NACACDTOL.admin.admin_gmt_modified" /></td>
-					<td><button class="btn btn-primary" style="margin: 5px;"
-							onclick="window.location='<%=basePath%>sadmin/admin_updateAdminPage?admin.jsj_sadmin_admin_id=<s:property value="#NACACDTOL.admin.jsj_sadmin_admin_id" />'">修改</button>
-						
-						<button class="btn btn-danger" style="margin: 5px;"
-							id="<s:property
+
+					<s:if
+						test="#NACACDTOL.admin.admin_account.toString() != #session.Admin.admin_account.toString()">
+						<td><button class="btn btn-primary" style="margin: 5px;"
+								onclick="window.location='<%=basePath%>sadmin/admin_updateAdminPage?admin.jsj_sadmin_admin_id=<s:property value="#NACACDTOL.admin.jsj_sadmin_admin_id" />'">修改</button>
+
+							<button class="btn btn-danger" style="margin: 5px;"
+								id="<s:property
 							value="#NACACDTOL.admin.jsj_sadmin_admin_id" />"
-							data-toggle="modal" data-target="#model_delete_admin"
-							onclick="javascript:delete_admin_id=this.id;">删除
-							</button>
-							<td><button class="btn btn-primary" style="margin: 5px;"
-							onclick="window.location='<%=basePath%>sadmin/admin_updateAdminPasswordPage?admin.jsj_sadmin_admin_id=<s:property value="#NACACDTOL.admin.jsj_sadmin_admin_id" />'">重置密码</button></td>
-							</td>
+								data-toggle="modal" data-target="#model_delete_admin"
+								onclick="javascript:delete_admin_id=this.id;">删除</button>
+						<td><button class="btn btn-primary" style="margin: 5px;"
+								onclick="window.location='<%=basePath%>sadmin/admin_updateAdminPasswordPage?admin.jsj_sadmin_admin_id=<s:property value="#NACACDTOL.admin.jsj_sadmin_admin_id" />'">重置密码</button></td>
+						</td>
+
+					</s:if>
+
 				</tr>
 			</s:iterator>
 
@@ -148,7 +153,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!---------------------------------------------------------------------------------------------------->
 	<!---------------------------------------------------------------------------------------------------->
 	<!---------------------------------------------------------------------------------------------------->
