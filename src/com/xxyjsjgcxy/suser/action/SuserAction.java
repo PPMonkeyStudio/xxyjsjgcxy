@@ -115,6 +115,66 @@ public class SuserAction extends ActionSupport {
 		return "index";
 	}
 
+	public String indexOld() {
+
+		Index index = new Index();
+
+		List<jsj_snews_category> listCategory = snewsCategoryService.listCategoryByRankOne_ForHeader();
+		ActionContext.getContext().getValueStack().set("listCategory", listCategory);
+
+		List<jsj_snews_category> listAllCategory = snewsCategoryService.listCategoryAll();
+		ActionContext.getContext().getValueStack().set("listAllCategory", listAllCategory);
+
+		/*
+		 * 
+		 */
+		List<NewsAndCategoryAndContentDTO> TZGG_Three = snewsNewsService
+				.list_NewsAndCategoryAndContent_ByCategory_Num("通知公告", 3);
+		// 删除图片
+		for (NewsAndCategoryAndContentDTO TZGG : TZGG_Three) {
+			TZGG.getContent().setContent_text(TZGG.getContent().getContent_text().replaceAll("<img.*\"[^>]*>", "【图片】"));
+			TZGG.getContent()
+					.setContent_text(TZGG.getContent().getContent_text().replaceAll("table.*</table>", "【表格】"));
+		}
+
+		List<NewsAndCategoryAndContentDTO> recommend_Nine = snewsNewsService
+				.list_NewsAndCategoryAndContent_ByRecommend_Num(9);
+
+		// 删除图片
+		for (NewsAndCategoryAndContentDTO recommend : recommend_Nine) {
+			recommend.getContent()
+					.setContent_text(recommend.getContent().getContent_text().replaceAll("<img.*\"[^>]*>", "【图片】"));
+			recommend.getContent()
+					.setContent_text(recommend.getContent().getContent_text().replaceAll("<table.*</table>", "【表格】"));
+
+		}
+
+		List<NewsAndCategoryAndContentDTO> CGZS_Four = snewsNewsService
+				.list_NewsAndCategoryAndContent_ByCategorySon_Num("成果展示", 9);
+
+		List<jsj_slink_link> LJ = slinkLinkService.listLinkAll();
+
+		List<jsj_snews_news> LB_B = scarouselService.getNewsBig();
+
+		List<jsj_snews_news> LB_S = scarouselService.getNewsSmall();
+
+		// System.out.println("LB_B:" + LB_B.toString());
+
+		index.setTZGG_Three(TZGG_Three);
+		index.setRecommend_Nine(recommend_Nine);
+		index.setCGZS_Four(CGZS_Four);
+		index.setLJ(LJ);
+		index.setLB_B(LB_B);
+		index.setLB_S(LB_S);
+		/*
+		 * 
+		 */
+
+		ActionContext.getContext().getValueStack().set("indexVO", index);
+
+		return "indexOld";
+	}
+
 	public String news_list() {
 
 		List<jsj_snews_category> listCategory = snewsCategoryService.listCategoryByRankOne_ForHeader();
