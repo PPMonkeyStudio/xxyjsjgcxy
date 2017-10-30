@@ -71,7 +71,7 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 	public void updateNews(jsj_snews_news news) {
 
 		news.setNews_gmt_modified(TimeUtil.getStringSecond());
-
+		System.out.println("bbbbbbbbbbb:" + news.getNews_bimg());
 		snewsNewsDao.updateNews(news);
 	}
 

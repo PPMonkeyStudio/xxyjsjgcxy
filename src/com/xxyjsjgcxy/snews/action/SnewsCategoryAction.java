@@ -108,9 +108,9 @@ public class SnewsCategoryAction extends ActionSupport implements ServletRespons
 	 */
 	public void update_category() {
 
-		System.out.println("sqrt:" + category.getCategory_sqrt());
-
 		ActionContext.getContext().getValueStack().set("page", page);
+
+		jsj_snews_category oldCategory = snewsCategoryService.getCategoryByID(category);
 
 		if (category_img != null) {
 			if (category_img.length() <= 5242800) {
@@ -140,7 +140,7 @@ public class SnewsCategoryAction extends ActionSupport implements ServletRespons
 
 			}
 		} else {
-			category.setCategory_img("default.jpg");
+			category.setCategory_img(oldCategory.getCategory_img());
 		}
 
 		snewsCategoryService.updateCategoryAllByID(category);
