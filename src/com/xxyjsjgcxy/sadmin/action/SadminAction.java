@@ -62,7 +62,7 @@ public class SadminAction extends ActionSupport implements ServletResponseAware,
 	}
 
 	/*
-	 * 鏇存柊椤甸潰
+	 * 閺囧瓨鏌婃い鐢告桨
 	 */
 	public String updateAdminPage() {
 
@@ -161,7 +161,7 @@ public class SadminAction extends ActionSupport implements ServletResponseAware,
 	}
 
 	/*
-	 * 閲嶇疆瀵嗙爜
+	 * 闁插秶鐤嗙�靛棛鐖�
 	 */
 	public void modifiedPassword() {
 		AdminDTO oldAdminDTO = sadminAdminService.get_Admin_ByAdminID(admin);
@@ -173,13 +173,11 @@ public class SadminAction extends ActionSupport implements ServletResponseAware,
 	}
 
 	/*
-	 * 淇敼涓汉瀵嗙爜
+	 * 娣囶喗鏁兼稉顏冩眽鐎靛棛鐖�
 	 */
 	public void modifiedpersonalPassword() {
-		System.out.println("浣犲ソ" + admin.getAdmin_password());
 
 		String pw = (String) ActionContext.getContext().getSession().get("Adminpw");
-		System.out.println("鍘熷瘑鐮�" + pw);
 		if (admin.getAdmin_password().equals(pw)) {
 
 			try {
@@ -264,11 +262,11 @@ public class SadminAction extends ActionSupport implements ServletResponseAware,
 		String result = sadminAdminService.Adminlogin(admin_account, admin_password);
 
 		if (!"error".equals(result) || !"passerror".equals(result)) {
-			// 瀛樻斁绠＄悊鍛榮ession 绠＄悊鍛樿处鍙枫�佺鐞嗗憳瀵嗙爜
+			// 鐎涙ɑ鏂佺粻锛勬倞閸涙Ξession 缁狅紕鎮婇崨妯垮閸欐灚锟戒胶顓搁悶鍡楁喅鐎靛棛鐖�
 			ActionContext.getContext().getSession().put("Admin", sadminAdminService.getAdminByAccount(admin_account));
 			ActionContext.getContext().getSession().put("Adminpw", admin_password);
 		}
-		// 杩斿洖缁欏鎴风
+		// 鏉╂柨娲栫紒娆忣吂閹撮顏�
 		try {
 			ServletActionContext.getResponse().setCharacterEncoding("utf-8");
 			ServletActionContext.getResponse().getWriter().write("{\"result\":\"" + result + "\"}");
@@ -279,7 +277,7 @@ public class SadminAction extends ActionSupport implements ServletResponseAware,
 
 	public void getMd5Pass() {
 		System.out.println("getMd5Pass");
-		// 杩斿洖缁欏鎴风
+		// 鏉╂柨娲栫紒娆忣吂閹撮顏�
 		try {
 			ServletActionContext.getResponse().setCharacterEncoding("utf-8");
 			ServletActionContext.getResponse().getWriter()

@@ -442,7 +442,7 @@ body, div, ul, li, a, span, input, img {
 /*swiper_small end*/
 .showList {
 	width: 492px;
-	height: 300px;
+	height: 324px;
 	float: right;
 	text-overflow: clip;
 	overflow: hidden;
