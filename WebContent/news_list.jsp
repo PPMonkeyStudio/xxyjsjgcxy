@@ -62,7 +62,7 @@
 							|
 							<s:property value="#LN.news.news_gmt_show.substring(0,10)" />
 							|
-							<s:property value="#LN.news.news_keywords" escape="false"/>
+							<s:property value="#LN.news.news_keywords" escape="false" />
 						</div>
 
 					</s:iterator>
@@ -96,7 +96,7 @@
 							页 </span>
 					</div>
 				</s:if>
-				<s:else>
+				<s:elseif test="listVO.category!=''&listVO.category!=null">
 					<div id="news_page">
 						<span
 							onclick="window.location='<%=basePath%>suser/news_list?listVO.category=<s:property value="listVO.category" />&listVO.pageIndex=1'">首
@@ -121,6 +121,34 @@
 						</s:else>
 						<span
 							onclick="window.location='<%=basePath%>suser/news_list?listVO.category=<s:property value="listVO.category" />&listVO.pageIndex=<s:property value="listVO.totalPages" />'">尾
+							页 </span>
+					</div>
+				</s:elseif>
+				<s:else>
+					<div id="news_page">
+						<span
+							onclick="window.location='<%=basePath%>suser/news_list?listVO.date=<s:property value="listVO.date" />&listVO.pageIndex=1'">首
+							页 |</span>
+						<s:if test="listVO.HavePrePage">
+							<span
+								onclick="window.location='<%=basePath%>suser/news_list?listVO.date=<s:property value="listVO.date" />&listVO.pageIndex=<s:property value="listVO.pageIndex-	1" />'">上
+								一 页 |</span>
+						</s:if>
+						<s:else>
+							<span onclick="javascript:toastr.warning('已经是第一页了');">上一 页
+								|</span>
+						</s:else>
+						<s:if test="listVO.HaveNextPage">
+							<span
+								onclick="window.location='<%=basePath%>suser/news_list?listVO.date=<s:property value="listVO.date" />&listVO.pageIndex=<s:property value="listVO.pageIndex+1" />'">下
+								一 页 |</span>
+						</s:if>
+						<s:else>
+							<span onclick="javascript:toastr.warning('已经是最后一页了');">下 一
+								页 |</span>
+						</s:else>
+						<span
+							onclick="window.location='<%=basePath%>suser/news_list?listVO.date=<s:property value="listVO.date" />&listVO.pageIndex=<s:property value="listVO.totalPages" />'">尾
 							页 </span>
 					</div>
 				</s:else>
