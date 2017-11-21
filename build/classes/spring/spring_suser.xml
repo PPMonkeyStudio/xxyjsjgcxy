@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="suserAction" class="com.xxyjsjgcxy.suser.action.SuserAction"
+		scope="prototype">
+		<property name="suserService" ref="suserService"></property>
+		<property name="snewsCategoryService" ref="snewsCategoryService"></property>
+		<property name="snewsNewsService" ref="snewsNewsService"></property>
+		<property name="slinkLinkService" ref="slinkLinkService"></property>
+		<property name="scarouselService" ref="scarouselService"></property>
+	</bean>
+	<!-- -->
+	<bean id="suserService" class="com.xxyjsjgcxy.suser.service.impl.SuserServiceImpl">
+		<property name="suserDao" ref="suserDao"></property>
+	</bean>
+	<!-- -->
+	<bean id="suserDao" class="com.xxyjsjgcxy.suser.dao.impl.SuserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+</beans>

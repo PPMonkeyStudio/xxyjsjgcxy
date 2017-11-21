@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="snewsCategoryAction" class="com.xxyjsjgcxy.snews.action.SnewsCategoryAction"
+		scope="prototype">
+		<property name="snewsCategoryService" ref="snewsCategoryService"></property>
+	</bean>
+	<!-- -->
+	<bean id="snewsCategoryService"
+		class="com.xxyjsjgcxy.snews.service.impl.SnewsCategoryServiceImpl">
+		<property name="snewsCategoryDao" ref="snewsCategoryDao"></property>
+	</bean>
+	<!-- -->
+	<bean id="snewsCategoryDao" class="com.xxyjsjgcxy.snews.dao.impl.SnewsCategoryDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- --><!-- -->
+	<bean id="snewsNewsAction" class="com.xxyjsjgcxy.snews.action.SnewsNewsAction"
+		scope="prototype">
+		<property name="snewsNewsService" ref="snewsNewsService"></property>
+	</bean>
+	<!-- -->
+	<bean id="snewsNewsService" class="com.xxyjsjgcxy.snews.service.impl.SnewsNewsServiceImpl">
+		<property name="snewsNewsDao" ref="snewsNewsDao"></property>
+		<property name="snewsCategoryDao" ref="snewsCategoryDao"></property>
+		<property name="scarouselService" ref="scarouselService"></property>
+	</bean>
+	<!-- -->
+	<bean id="snewsNewsDao" class="com.xxyjsjgcxy.snews.dao.impl.SnewsNewsDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+</beans>

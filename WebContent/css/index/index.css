@@ -134,8 +134,8 @@ body, div, ul, li, a, span, input, img {
 }
 
 .newTop span {
-	font: 20px/30px "瀵邦喛钂嬮梿鍛寸拨";
-	color: black;
+	font: 20px/30px "微软雅黑";
+	color: #134978;
 }
 
 .newTop a {
@@ -230,8 +230,9 @@ body, div, ul, li, a, span, input, img {
 }
 
 /*鐎涳箓娅岀憰渚� start*/
-.newCot { /*娑撳秴鐢崶鍓у閻ㄥ嫰銆婇弶鈥茶礋閽冿拷/
+.newCot { /*娑撳秴鐢崶鍓у閻ㄥ嫰銆婇弶鈥茶礋閽冿拷*/
 	border-top: 2px solid #0e477e;
+	height:230px;
 }
 
 .cot_content .img_color { /*鐢箑娴橀悧鍥╂畱妞よ埖娼稉鐑橆煹*/
@@ -248,6 +249,7 @@ body, div, ul, li, a, span, input, img {
 .new_title {
 	width: 970px;
 	margin-left: 15px;
+	margin-bottom: 10px;
 }
 
 .info_wrapper {
@@ -301,6 +303,7 @@ body, div, ul, li, a, span, input, img {
 	overflow: hidden;
 	max-height: 44px;
 	margin-top: 10px;
+	margin-bottom:15px;
 }
 
 .heading:hover {

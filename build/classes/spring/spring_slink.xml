@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	
+	<bean id="slinkLinkAction" class="com.xxyjsjgcxy.slink.action.SlinkLinkAction"
+		scope="prototype">
+		<property name="slinkLinkService" ref="slinkLinkService"></property>
+	</bean>
+	<!-- -->
+	<bean id="slinkLinkService" class="com.xxyjsjgcxy.slink.service.impl.SlinkLinkServiceImpl">
+		<property name="slinkLinkDao" ref="slinkLinkDao"></property>
+	</bean>
+	<!-- -->
+	<bean id="slinkLinkDao" class="com.xxyjsjgcxy.slink.dao.impl.SlinkLinkDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+
+</beans>
