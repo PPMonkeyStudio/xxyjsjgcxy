@@ -3,6 +3,7 @@ package com.xxyjsjgcxy.snews.action;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -107,7 +108,20 @@ public class SnewsCategoryAction extends ActionSupport implements ServletRespons
 	 * 修改类别
 	 */
 	public void update_category() {
-
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		ActionContext.getContext().getValueStack().set("page", page);
 
 		jsj_snews_category oldCategory = snewsCategoryService.getCategoryByID(category);
@@ -120,7 +134,7 @@ public class SnewsCategoryAction extends ActionSupport implements ServletRespons
 				String fileName = UUID.randomUUID().toString()
 						+ category_imgFileName.substring(category_imgFileName.lastIndexOf("."));
 
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_img/snews_category/" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_category/" + fileName;
 
 				System.out.println("改名后fileName:" + fileName);
 
@@ -161,6 +175,20 @@ public class SnewsCategoryAction extends ActionSupport implements ServletRespons
 	 * 创建类别
 	 */
 	public void save_category() {
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 
 		/*
 		 * 验证类别名称，图片类型
@@ -201,7 +229,7 @@ public class SnewsCategoryAction extends ActionSupport implements ServletRespons
 				String fileName = UUID.randomUUID().toString()
 						+ category_imgFileName.substring(category_imgFileName.lastIndexOf("."));
 
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_img/snews_category/" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_category/" + fileName;
 
 				System.out.println("改名后fileName:" + fileName);
 

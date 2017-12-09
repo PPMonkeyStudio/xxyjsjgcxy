@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -170,7 +171,20 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 	}
 
 	public void saveNewsContentImg() {
-
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		if (file != null) {
 			int i = 0;
 			String[] imgUrl = new String[file.length];
@@ -184,7 +198,7 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 				String filePath;
 				String fileName = UUID.randomUUID().toString()
 						+ fileFileName[i].substring(fileFileName[i].lastIndexOf("."));
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content_temporary/" + news.getJsj_snews_news_id()
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content_temporary/" + news.getJsj_snews_news_id()
 						+ "_" + fileName;
 
 				File newFile = new File(filePath);
@@ -222,7 +236,20 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 	}
 
 	public void updateNews() {
-
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		System.out.println("-----------------------------updateNews-------------------------------");
 
 		NewsAndCategoryAndContentDTO oldNewsAndCategoryAndContentDTO = snewsNewsService
@@ -234,14 +261,14 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 		if (news_bimg != null) {
 			if (news_bimg.length() <= 50 * 1024 * 1024) {
 				if (!oldNewsAndCategoryAndContentDTO.getNews().getNews_bimg().equals("default.jpg")) {
-					File oldBimg = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/"
+					File oldBimg = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/"
 							+ oldNewsAndCategoryAndContentDTO.getNews().getNews_bimg());
 					oldBimg.delete();
 				}
 				String filePath;
 				String fileName = UUID.randomUUID().toString()
 						+ news_bimgFileName.substring(news_bimgFileName.lastIndexOf("."));
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/" + fileName;
 				oldNewsAndCategoryAndContentDTO.getNews().setNews_bimg(fileName);
 				File newFile = new File(filePath);
 				try {
@@ -254,14 +281,14 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 		if (news_simg != null) {
 			if (news_simg.length() <= 50 * 1024 * 1024) {
 				if (!oldNewsAndCategoryAndContentDTO.getNews().getNews_simg().equals("default.jpg")) {
-					File oldSimg = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/"
+					File oldSimg = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/"
 							+ oldNewsAndCategoryAndContentDTO.getNews().getNews_simg());
 					oldSimg.delete();
 				}
 				String filePath;
 				String fileName = UUID.randomUUID().toString()
 						+ news_simgFileName.substring(news_simgFileName.lastIndexOf("."));
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/" + fileName;
 				oldNewsAndCategoryAndContentDTO.getNews().setNews_simg(fileName);
 				File newFile = new File(filePath);
 				try {
@@ -314,7 +341,8 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 			while (i < file.length) {
 				String filePath;
 				String fileName = fileFileName[i];
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_annex/snews_news/" + news.getJsj_snews_news_id() + "_" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_annex/snews_news/" + news.getJsj_snews_news_id() + "_"
+						+ fileName;
 				System.out.println(fileName);
 				if (i == 0) {
 					news.setNews_annex(fileName);
@@ -432,7 +460,14 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 	}
 
 	public void saveNews() {
-
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		/*
 		 * 大图
 		 */
@@ -441,7 +476,7 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 				String filePath;
 				String fileName = UUID.randomUUID().toString()
 						+ news_bimgFileName.substring(news_bimgFileName.lastIndexOf("."));
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/" + fileName;
 				news.setNews_bimg(fileName);
 				File newFile = new File(filePath);
 				try {
@@ -461,7 +496,7 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 				String filePath;
 				String fileName = UUID.randomUUID().toString()
 						+ news_simgFileName.substring(news_simgFileName.lastIndexOf("."));
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/" + fileName;
 				news.setNews_simg(fileName);
 				File newFile = new File(filePath);
 				try {
@@ -483,7 +518,8 @@ public class SnewsNewsAction extends ActionSupport implements ServletResponseAwa
 			while (i < file.length) {
 				String filePath;
 				String fileName = fileFileName[i];
-				filePath = "C://xxyjsjgcxy/xxyjsjgcxy_annex/snews_news/" + news.getJsj_snews_news_id() + "_" + fileName;
+				filePath = lj + "xxyjsjgcxy/xxyjsjgcxy_annex/snews_news/" + news.getJsj_snews_news_id() + "_"
+						+ fileName;
 				System.out.println(fileName);
 
 				news.setNews_annex(news.getNews_annex() + ";" + fileFileName[i]);

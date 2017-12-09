@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.UUID;
 
 import org.apache.commons.io.FileUtils;
@@ -71,7 +72,6 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 	public void updateNews(jsj_snews_news news) {
 
 		news.setNews_gmt_modified(TimeUtil.getStringSecond());
-		System.out.println("bbbbbbbbbbb:" + news.getNews_bimg());
 		snewsNewsDao.updateNews(news);
 	}
 
@@ -133,30 +133,71 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 
 	@Override
 	public void removeNewsBImgByNewsID(jsj_snews_news news) {
-
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		if (news.getNews_bimg().equals("default.jpg")) {
 
 		} else {
 			System.out.println("删除大图：" + news.getNews_bimg());
-			File bImg = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/" + news.getNews_bimg());
+			File bImg = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/bimg/" + news.getNews_bimg());
 			bImg.delete();
 		}
 	}
 
 	@Override
 	public void removeNewsSImgByNewsID(jsj_snews_news news) {
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		if (news.getNews_simg().equals("default.jpg")) {
 
 		} else {
 			System.out.println("删除小图：" + news.getNews_simg());
-			File sImg = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/" + news.getNews_simg());
+			File sImg = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/simg/" + news.getNews_simg());
 			sImg.delete();
 		}
 	}
 
 	@Override
 	public void removeNewsAnnexByNewsID(jsj_snews_news news) {
-		File root = new File("C://xxyjsjgcxy/xxyjsjgcxy_annex/snews_news");
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
+		File root = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_annex/snews_news");
 		File[] allFiles = root.listFiles();
 
 		for (File file : allFiles) {
@@ -170,7 +211,21 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 
 	@Override
 	public void removeContentImgByNewsID(jsj_snews_news news) {
-		File root = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content");
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
+		File root = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content");
 		File[] allFiles = root.listFiles();
 
 		for (File file : allFiles) {
@@ -397,6 +452,20 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 
 	@Override
 	public void removeOldAnnex(jsj_snews_news oldNews, String remain_oldAnnex) {
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		String[] oldAnnexs = oldNews.getNews_annex().split(";");
 		String[] remain_oldAnnexs = remain_oldAnnex.split(";");
 		List<String> remove_oldAnnexList = new ArrayList<String>();
@@ -414,7 +483,7 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 		for (int i = 0; i < oldAnnexs.length; i++) {
 			if (oldAnnexs[i] != null) {
 				remove_oldAnnexList.add(oldAnnexs[i]);
-				String path = "C://xxyjsjgcxy/xxyjsjgcxy_annex/snews_news/" + oldNews.getJsj_snews_news_id() + "_"
+				String path = lj + "xxyjsjgcxy/xxyjsjgcxy_annex/snews_news/" + oldNews.getJsj_snews_news_id() + "_"
 						+ oldAnnexs[i];
 				File file = new File(path);
 				file.delete();
@@ -424,6 +493,20 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 
 	@Override
 	public void removeOldContentImg(jsj_snews_news news, jsj_snews_content content) {
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 
 		/*
 		 * 创建内容图片的列表
@@ -445,7 +528,7 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 		 * 删除已经删除的图片
 		 */
 
-		File root = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content");
+		File root = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content");
 
 		File[] allFiles = root.listFiles();
 
@@ -475,6 +558,20 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 
 	@Override
 	public jsj_snews_content removeContentTemporaryImg_saveContentImg(jsj_snews_news news, jsj_snews_content content) {
+		/*
+		 * 获取路径
+		 */
+		String lj = "";
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		System.out.println(
 				"deleteContentTemporaryImg_saveContentImg:-----newsID：----------" + news.getJsj_snews_news_id());
 		/*
@@ -497,7 +594,7 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 		 * 转移临时图片
 		 */
 
-		File root = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content_temporary");
+		File root = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content_temporary");
 
 		File[] allFiles = root.listFiles();
 
@@ -519,7 +616,7 @@ public class SnewsNewsServiceImpl implements SnewsNewsService {
 						/*
 						 * 转移
 						 */
-						File newFile = new File("C://xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content/" + file.getName());
+						File newFile = new File(lj + "xxyjsjgcxy/xxyjsjgcxy_img/snews_news/content/" + file.getName());
 						try {
 							FileUtils.copyFile(file, newFile);
 						} catch (IOException e) {

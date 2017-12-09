@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.util.List;
+import java.util.Properties;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -56,7 +57,19 @@ public class SuserAction extends ActionSupport {
 	}
 
 	public String index() {
-
+		/*
+		 * 
+		 */
+		try {
+			Properties props = new Properties();
+			props.load(this.getClass().getClassLoader().getResourceAsStream("file.properties"));
+			String lj = props.getProperty("lj");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		/*
+		 * 
+		 */
 		Index index = new Index();
 
 		List<jsj_snews_category> listCategory = snewsCategoryService.listCategoryByRankOne_ForHeader();
