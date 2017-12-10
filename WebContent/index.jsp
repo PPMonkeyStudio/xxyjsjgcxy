@@ -37,7 +37,7 @@
 				<div class="swiper_big">
 					<div class="swiper-container part1">
 						<div class="swiper-wrapper">
-							<s:iterator value="indexVO.LB_B" id="LB_B">
+							<s:iterator value="indexVO.LB_B" var="LB_B">
 								<div class="swiper-slide part1_1">
 									<img style="cursor: pointer;"
 										onclick="window.location='<%=basePath%>suser/news_details?news.jsj_snews_news_id=<s:property
@@ -70,7 +70,7 @@
 
 				<div class="info-show">
 					<!--  -->
-					<s:iterator value="indexVO.TZGG_Three" id="TZGG">
+					<s:iterator value="indexVO.TZGG_Three" var="TZGG">
 
 						<div class="media info2">
 							<div class="media-left media-left-change">
@@ -89,14 +89,12 @@
 										value="#TZGG.news.news_title" /></a> <a
 									href="<%=basePath%>suser/news_details?news.jsj_snews_news_id=<s:property
 												value="#TZGG.news.jsj_snews_news_id" />"><s:property
-										value="#TZGG.content.content_text" escape="false" /></a>
+										value="#TZGG.content.content_text" escapeHtml="false" /></a>
 							</div>
 						</div>
-
 					</s:iterator>
 					<!--  -->
 				</div>
-
 			</div>
 			<div class="newBox info_wrapper">
 				<div class="newTop new_title">
@@ -105,7 +103,7 @@
 				</div>
 				<div class="newContent info_content">
 					<!--  -->
-					<s:iterator value="indexVO.recommend_Nine" id="RN">
+					<s:iterator value="indexVO.recommend_Nine" var="RN">
 
 						<%-- <s:if test="#RN.news.news_simg=='default.jpg'"> --%>
 						<div class="info1 cot_content_center">
@@ -118,7 +116,7 @@
 								<a
 									href="<%=basePath%>suser/news_details?news.jsj_snews_news_id=<s:property
 												value="#RN.news.jsj_snews_news_id" />"><s:property
-										value="#RN.content.content_text" escape="false" /></a>
+										value="#RN.content.content_text" escapeHtml="false" /></a>
 							</div>
 						</div>
 						<%-- </s:if> --%>
@@ -137,7 +135,7 @@
 									<a class="word_a"
 										href="<%=basePath%>suser/news_details?news.jsj_snews_news_id=<s:property
 												value="#RN.news.jsj_snews_news_id" />"><s:property
-											value="#RN.content.content_text" escape="false" /> </a>
+											value="#RN.content.content_text" escapeHtml="false" /> </a>
 								</div>
 							</div>
 						</s:else> --%>
@@ -155,7 +153,7 @@
 					<div class="swiper-container part2">
 						<div class="swiper-wrapper">
 
-							<s:iterator value="indexVO.LB_S" id="LB_S">
+							<s:iterator value="indexVO.LB_S" var="LB_S">
 								<div class="swiper-slide part2_1">
 									<img style="cursor: pointer;"
 										onclick="window.location='<%=basePath%>suser/news_details?news.jsj_snews_news_id=<s:property
@@ -173,7 +171,7 @@
 					<div class="swiper-pagination part_2"></div>
 				</div>
 				<div class="showList">
-					<s:iterator value="indexVO.CGZS_Four" id="CGZS">
+					<s:iterator value="indexVO.CGZS_Four" var="CGZS">
 						<div class="showCot">
 							<img class="showList_img" src="<%=basePath%>img/index/dig.png" />
 							<a class="showList_text"
@@ -195,7 +193,7 @@
 		<div class="linkCot">
 			<span>常用链接</span>
 			<div style="background-color: #babfc4; width: 300px; height: 2px;"></div>
-			<s:iterator value="indexVO.LJ" id="LJ">
+			<s:iterator value="indexVO.LJ" var="LJ">
 				<a href="http://<s:property value="#LJ.link_url" />" target="_Blank"><s:property
 						value="#LJ.link_name" /></a>
 			</s:iterator>
