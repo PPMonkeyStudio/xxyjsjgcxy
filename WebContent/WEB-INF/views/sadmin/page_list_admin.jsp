@@ -57,30 +57,28 @@
 				<th id="admin_gmt_modified" onclick="click_sqrt(this)">修改时间</th>
 				<th colspan="2">操作</th>
 			</tr>
-			<s:iterator value="page_list_admin.adminDTOList" id="NACACDTOL">
+			<s:iterator value="page_list_admin.adminDTOList" var="NACACDTOL">
 				<tr>
 					<td><s:property value="#NACACDTOL.admin.admin_account"
-							escape="false" /></td>
+							escapeHtml="false" /></td>
 
 					<td><s:property
-							value="#NACACDTOL.admin.admin_premission_admin" escape="false" /></td>
+							value="#NACACDTOL.admin.admin_premission_admin" escapeHtml="false" /></td>
 					<td><s:property
 							value="#NACACDTOL.admin.admin_premission_scarousel"
-							escape="false" /></td>
+							escapeHtml="false" /></td>
 					<td><s:property
-							value="#NACACDTOL.admin.admin_premission_snews" escape="false" /></td>
+							value="#NACACDTOL.admin.admin_premission_snews" escapeHtml="false" /></td>
 					<td><s:property
-							value="#NACACDTOL.admin.admin_premission_slink" escape="false" /></td>
+							value="#NACACDTOL.admin.admin_premission_slink" escapeHtml="false" /></td>
 
 
 					<td><s:property value="#NACACDTOL.admin.admin_gmt_create" /></td>
 					<td><s:property value="#NACACDTOL.admin.admin_gmt_modified" /></td>
-
 					<s:if
 						test="#NACACDTOL.admin.admin_account.toString() != #session.Admin.admin_account.toString()">
 						<td><button class="btn btn-primary" style="margin: 5px;"
 								onclick="window.location='<%=basePath%>sadmin/admin_updateAdminPage?admin.jsj_sadmin_admin_id=<s:property value="#NACACDTOL.admin.jsj_sadmin_admin_id" />'">修改</button>
-
 							<button class="btn btn-danger" style="margin: 5px;"
 								id="<s:property
 							value="#NACACDTOL.admin.jsj_sadmin_admin_id" />"

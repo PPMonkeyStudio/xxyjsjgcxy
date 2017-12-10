@@ -35,7 +35,7 @@
 				style="width: 100%; height: 0px; border: 2px solid #eeeeee; margin: 0;">
 			<!---------------------------------------------------------------------------->
 
-			<s:iterator value="categoryListDTO" id="CL">
+			<s:iterator value="categoryListDTO" var="CL">
 				<div style="height: 50px;">
 					<i class="lnr lnr-bookmark"
 						style="color: #1abc9c; font-weight: bold; margin: 0 5px 0 0; font-size: 20px;"></i>
@@ -86,7 +86,7 @@
 					</div>
 				</div>
 				<!---------------------------->
-				<s:iterator value="#CL.sonCategoryList" id="SCL">
+				<s:iterator value="#CL.sonCategoryList" var="SCL">
 					<div style="height: 50px; margin: 0 0 0 80px;">
 						<span style="line-height: 50px;"><s:property
 								value="#SCL.category_name" /></span>

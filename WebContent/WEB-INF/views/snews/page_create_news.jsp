@@ -119,7 +119,7 @@
 						style="width: 100%; height: 800px; word-wrap: break-word; word-break: break-all; background-color: white; margin: 20px 10px;">
 						<s:property
 							value="newsAndCategoryAndContentDTO.content.content_text"
-							escape="false" />
+							escapeHtml="false" />
 					</div></td>
 			</tr>
 			<tr>

@@ -57,12 +57,12 @@
 				<th>操作</th>
 			</tr>
 
-			<s:iterator value="page_list_link.linkDTOList" id="NACACDTOL">
+			<s:iterator value="page_list_link.linkDTOList" var="NACACDTOL">
 				<tr>
 					<td><s:property value="#NACACDTOL.link.link_name"
-							escape="false" /></td>
+							escapeHtml="false" /></td>
 					<td><s:property value="#NACACDTOL.link.link_url"
-							escape="false" /></td>
+							escapeHtml="false" /></td>
 
 					<td><s:property value="#NACACDTOL.link.link_gmt_create" /></td>
 					<td><s:property value="#NACACDTOL.link.link_gmt_modified" /></td>

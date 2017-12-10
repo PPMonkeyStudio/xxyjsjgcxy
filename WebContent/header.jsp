@@ -64,7 +64,7 @@
 						<a  href="<%=basePath%>suser/index" class="nav-btn">首页</a>
 
 						<!-- 超过八个不显示 -->
-						<s:iterator value="listCategory" id="LC">
+						<s:iterator value="listCategory" var="LC">
 							<s:if test="#LC.category_news!=''">
 								<a
 									href="<%=basePath%>suser/news_details?category.category_news=<s:property value="#LC.category_news" />&listVO.pageIndex=1"
@@ -82,7 +82,7 @@
 				<div id="expandZone" class="expand">
 					<div class="detailNav">
 
-						<s:iterator value="listCategory" id="LC">
+						<s:iterator value="listCategory" var="LC">
 							<div class="item">
 								<div class="detailNav-list">
 									<div class="detailNav_left">
@@ -93,7 +93,7 @@
 											src="<%=basePath%>snews/img_getNewsCategoryImg?imgName=<s:property value="#LC.category_img" />" />
 									</div>
 									<div class="detailNav_right">
-										<s:iterator value="listAllCategory" id="LAC">
+										<s:iterator value="listAllCategory" var="LAC">
 											<s:if test="#LAC.category_father==#LC.jsj_snews_category_id">
 												<s:if test="#LAC.category_news!=''">
 													<a

@@ -48,12 +48,12 @@
 
 			<div id="main_left" style="width: 500px; float: left;">
 				<div id="news_list" style="min-height: 500px;">
-					<s:iterator value="listVO.listNews" id="LN">
+					<s:iterator value="listVO.listNews" var="LN">
 						<div id="news_list_content_head">
 							<a
 								href="<%=basePath%>suser/news_details?news.jsj_snews_news_id=<s:property
 							value="#LN.news.jsj_snews_news_id" />">
-								<s:property value="#LN.news.news_title" escape="false" />
+								<s:property value="#LN.news.news_title" escapeHtml="false" />
 							</a>
 						</div>
 
@@ -62,7 +62,7 @@
 							|
 							<s:property value="#LN.news.news_gmt_show.substring(0,10)" />
 							|
-							<s:property value="#LN.news.news_keywords" escape="false" />
+							<s:property value="#LN.news.news_keywords" escapeHtml="false" />
 						</div>
 
 					</s:iterator>

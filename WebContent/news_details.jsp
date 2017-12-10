@@ -57,7 +57,7 @@
 				<div>
 					<s:property
 						value="detailsVO.newsCategoryContent.content.content_text"
-						escape="false" />
+						escapeHtml="false" />
 				</div>
 				<!-- 存储附件-->
 				<div id="div_news_annex" style="display: none;">
@@ -115,7 +115,7 @@
 									<div class="news_content"
 										onclick="window.location='<%=basePath%>suser/news_details?news.jsj_snews_news_id=<s:property
 											value="#RN.news.jsj_snews_news_id" />'">
-										<s:property value="#RN.content.content_text" escape="false" />
+										<s:property value="#RN.content.content_text" escapeHtml="false" />
 									</div>
 								</ul>
 							</li>

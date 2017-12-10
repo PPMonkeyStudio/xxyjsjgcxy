@@ -31,7 +31,7 @@
 			<div class="navi_body">
 				<div class="navi_head">
 					<div style="width: 1040px; margin-left: auto; margin-right: auto;">
-						<s:iterator value="listCategory" id="LC">
+						<s:iterator value="listCategory" var="LC">
 							<span> <s:if test="#LC.category_news!=''">
 									<p class="navi_title" style="cursor: pointer;"
 										onclick="window.location='<%=basePath%>suser/news_details?category.category_news=<s:property value="#LC.category_news" />&listVO.pageIndex=1'">
@@ -39,7 +39,7 @@
 									<p class="navi_title" style="cursor: pointer;"
 										onclick="window.location='<%=basePath%>suser/news_list?listVO.category=<s:property value="#LC.category_name" />&listVO.pageIndex=1'">
 								</s:else> <s:property value="#LC.category_name" />
-								</p> <s:iterator value="listAllCategory" id="LAC">
+								</p> <s:iterator value="listAllCategory" var="LAC">
 									<s:if test="#LAC.category_father==#LC.jsj_snews_category_id">
 										<p>
 											<s:if test="#LAC.category_news!=''">
