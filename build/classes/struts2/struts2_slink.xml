@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+	"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="slink" namespace="/slink" extends="struts-default" strict-method-invocation="false">
+		<action name="link_*" class="com.xxyjsjgcxy.slink.action.SlinkAction"
+			method="{1}">
+
+			<result name="page_list_link">/WEB-INF/views/slink/page_list_link.jsp
+			</result>
+			<result name="page_create_link">/WEB-INF/views/slink/page_create_link.jsp
+			</result>
+			<result name="updateLinkPage">/WEB-INF/views/slink/page_create_link.jsp
+			</result>
+		</action>
+	</package>
+</struts>
