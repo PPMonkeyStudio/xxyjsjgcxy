@@ -13,7 +13,7 @@
 <!-- 			</result> -->
 <!-- 		</action> -->
 <!-- 	</package> -->
-<package name="sadmin" namespace="/sadmin" extends="struts-default">
+<package name="sadmin" namespace="/sadmin" extends="struts-default" strict-method-invocation="false">
 		<action name="admin_*" class="com.xxyjsjgcxy.sadmin.action.SadminAction"
 			method="{1}">
 

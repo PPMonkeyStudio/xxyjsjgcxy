@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-21 10:54:30 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xxyjsjgcxy.scarousel.domain.jsj_scarousel_img" table="JSJ_SCAROUSEL_IMG">
+        <id name="jsj_scarousel_img_id" type="java.lang.String">
+            <column name="JSJ_SCAROUSEL_IMG_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="img_news" type="java.lang.String">
+            <column name="IMG_NEWS" />
+        </property>
+        <property name="img_group" type="java.lang.String">
+            <column name="IMG_GROUP" />
+        </property>
+        <property name="img_gmt_create" type="java.lang.String">
+            <column name="IMG_GMT_CREATE" />
+        </property>
+        <property name="img_gmt_modified" type="java.lang.String">
+            <column name="IMG_GMT_MODIFIED" />
+        </property>
+    </class>
+</hibernate-mapping>
