@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-9-27 9:25:01 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xxyjsjgcxy.snews.domain.jsj_snews_category" table="JSJ_SNEWS_CATEGORY">
+        <id name="jsj_snews_category_id" type="java.lang.String">
+            <column name="JSJ_SNEWS_CATEGORY_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="category_name" type="java.lang.String">
+            <column name="CATEGORY_NAME" />
+        </property>
+        <property name="category_rank" type="int">
+            <column name="CATEGORY_RANK" />
+        </property>
+        <property name="category_sqrt" type="java.lang.Integer">
+            <column name="CATEGORY_SQRT" />
+        </property>
+        <property name="category_show" type="int">
+            <column name="CATEGORY_SHOW" />
+        </property>
+        <property name="category_Introduction" type="java.lang.String">
+            <column name="CATEGORY_INTRODUCTION" />
+        </property>
+        <property name="category_img" type="java.lang.String">
+            <column name="CATEGORY_IMG" />
+        </property>
+        <property name="category_news" type="java.lang.String">
+            <column name="CATEGORY_NEWS" />
+        </property>
+        <property name="category_father" type="java.lang.String">
+            <column name="CATEGORY_FATHER" />
+        </property>
+        <property name="category_gmt_create" type="java.lang.String">
+            <column name="CATEGORY_GMT_CREATE" />
+        </property>
+        <property name="category_gmt_modified" type="java.lang.String">
+            <column name="CATEGORY_GMT_MODIFIED" />
+        </property>
+    </class>
+</hibernate-mapping>

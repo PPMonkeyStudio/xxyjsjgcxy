@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-22 8:02:40 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xxyjsjgcxy.snews.domain.jsj_snews_news" table="JSJ_SNEWS_NEWS">
+        <id name="jsj_snews_news_id" type="java.lang.String">
+            <column name="JSJ_SNEWS_NEWS_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="news_title" type="java.lang.String">
+            <column name="NEWS_TITLE" />
+        </property>
+        <property name="news_bimg" type="java.lang.String">
+            <column name="NEWS_BIMG" />
+        </property>
+        <property name="news_simg" type="java.lang.String">
+            <column name="NEWS_SIMG" />
+        </property>
+        <property name="news_annex" type="java.lang.String">
+            <column name="NEWS_ANNEX" />
+        </property>
+        <property name="news_num_annex" type="int">
+            <column name="NEWS_NUM_ANNEX" />
+        </property>
+        <property name="news_keywords" type="java.lang.String">
+            <column name="NEWS_KEYWORDS" />
+        </property>
+        <property name="news_category" type="java.lang.String">
+            <column name="NEWS_CATEGORY" />
+        </property>
+        <property name="news_recommend" type="int">
+            <column name="NEWS_RECOMMEND" />
+        </property>
+        <property name="news_browse" type="int">
+            <column name="NEWS_BROWSE" />
+        </property>
+        <property name="news_source" type="java.lang.String">
+            <column name="NEWS_SOURCE" />
+        </property>
+        <property name="news_publish" type="int">
+            <column name="NEWS_PUBLISH" />
+        </property>
+        <property name="news_gmt_show" type="java.lang.String">
+            <column name="NEWS_GMT_SHOW" />
+        </property>
+        <property name="news_gmt_create" type="java.lang.String">
+            <column name="NEWS_GMT_CREATE" />
+        </property>
+        <property name="news_gmt_modified" type="java.lang.String">
+            <column name="NEWS_GMT_MODIFIED" />
+        </property>
+    </class>
+</hibernate-mapping>

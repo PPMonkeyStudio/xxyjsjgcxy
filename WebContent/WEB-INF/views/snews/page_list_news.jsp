@@ -134,7 +134,7 @@
 			</tr>
 
 			<s:iterator value="page_list_news.newsAndCategoryAndContentDTOList"
-				id="NACACDTOL">
+				var="NACACDTOL">
 				<tr>
 					<td><s:if
 							test="#NACACDTOL.news.news_publish == '1'.toString()">✔</s:if> <s:else>
@@ -147,9 +147,9 @@
 						</s:else></td>
 					<td><s:property value="#NACACDTOL.category.category_name" /></td>
 					<td><s:property value="#NACACDTOL.news.news_title"
-							escape="false" /></td>
+							escapeHtml="false" /></td>
 					<td><s:property value="#NACACDTOL.news.news_keywords"
-							escape="false" /></td>
+							escapeHtml="false" /></td>
 					<td><s:if test="#NACACDTOL.news.news_bimg != 'default.jpg'">✔</s:if>
 						<s:else>
 							<span style='color: #ff5063;'>✘</span>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-22 8:02:40 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xxyjsjgcxy.sadmin.domain.jsj_sadmin_admin" table="jsj_sadmin_admin">
+        <id name="jsj_sadmin_admin_id" type="java.lang.String">
+            <column name="jsj_sadmin_admin_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="admin_account" type="java.lang.String">
+            <column name="admin_account" />
+        </property>
+        <property name="admin_password" type="java.lang.String">
+            <column name="admin_password" />
+        </property>
+        <property name="admin_premission_admin" type="java.lang.String">
+            <column name="admin_premission_admin" />
+        </property>
+        <property name="admin_premission_scarousel" type="java.lang.String">
+            <column name="admin_premission_scarousel" />
+        </property>
+        <property name="admin_premission_snews" type="java.lang.String">
+            <column name="admin_premission_snews" />
+        </property>
+        <property name="admin_premission_slink" type="java.lang.String">
+            <column name="admin_premission_slink" />
+        </property>
+        
+        <property name="admin_gmt_create" type="java.lang.String">
+            <column name="admin_gmt_create" />
+        </property>
+        <property name="admin_gmt_modified" type="java.lang.String">
+            <column name="admin_gmt_modified" />
+        </property>
+    </class>
+</hibernate-mapping>

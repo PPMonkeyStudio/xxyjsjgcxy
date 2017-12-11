@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-7-22 8:02:40 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.xxyjsjgcxy.slink.domain.jsj_slink_link" table="JSJ_SLINK_LINK">
+        <id name="jsj_slink_link_id" type="java.lang.String">
+            <column name="jsj_slink_link_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="link_name" type="java.lang.String">
+            <column name="link_name" />
+        </property>
+        <property name="link_url" type="java.lang.String">
+            <column name="link_url" />
+        </property>
+        
+        <property name="link_gmt_create" type="java.lang.String">
+            <column name="link_gmt_create" />
+        </property>
+        <property name="link_gmt_modified" type="java.lang.String">
+            <column name="link_gmt_modified" />
+        </property>
+        
+    </class>
+</hibernate-mapping>
