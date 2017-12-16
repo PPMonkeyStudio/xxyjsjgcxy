@@ -16,7 +16,7 @@
 		</action>
 		<action name="logout" class="com.xxyjsjgcxy.suser.action.SuserAction"
 			method="logout">
-			<result name="logout" type="redirectAction">suser/index
+			<result name="logout" type="redirectAction">/index
 			</result>
 		</action>
 

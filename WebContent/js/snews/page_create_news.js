@@ -35,11 +35,11 @@ function create_editor() {
 
 	/*  
 	 */
-	editor.customConfig.uploadImgMaxSize = 50 * 1024 * 1024;// 将图片大小限制为 3M
+	editor.customConfig.uploadImgMaxSize = 50 * 1024 * 1024;// 将图片大小限制为 50M
 	editor.customConfig.zIndex = 3;
 	editor.customConfig.uploadFileName = 'file';// 自定义 fileName
 
-	editor.customConfig.uploadImgTimeout = 1000;// 自定义 timeout 时间
+	editor.customConfig.uploadImgTimeout = 10000;// 自定义 timeout 时间
 
 	editor.customConfig.customAlert = function(info) {
 		// info 是需要提示的内容
